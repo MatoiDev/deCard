@@ -1,14 +1,11 @@
+<img src="preview.png">
+
 # deCard
 Simple Apple Pay cards customiser
 
 # Preview
 
-## On screeen:
-<img src="previewOnScreen.png">
-
-## In reality:
-<img src="previewReal.png">
-
+<img src="previewScreen.png">
 
 # English:
 
@@ -34,7 +31,7 @@ If you want to improve this project, then write to the author [@Uncle_Milty](htt
 Позволяет кастомизировать карты Apple Pay на вашем iPhone. Необходим [Jailbreak](https://www.cydiafree.com) устройства!
 
 ### Компиляция   
-  - Для компиляции этого твика необходимо установить [Theos](https://theos.dev/)ю
+  - Для компиляции этого твика необходимо установить [Theos](https://theos.dev/).
   - Вы так же можете использовать Xcode.
     
 ### Совместимость
