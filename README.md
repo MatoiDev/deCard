@@ -1,8 +1,5 @@
 <img src="preview.png">
 
-# deCard
-Simple Apple Pay cards customiser
-
 # Preview
 
 <img src="previewScreen.png">
