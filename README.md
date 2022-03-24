@@ -7,6 +7,10 @@ Simple Apple Pay cards customiser
 
 <img src="previewScreen.png">
 
+# Instruction
+
+<img src="instruction.png">
+
 # English:
 
 ## deCard
