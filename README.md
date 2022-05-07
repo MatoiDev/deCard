@@ -10,8 +10,9 @@
 
 # English:
 
-## deCard
+## deCard (Beta)
 Allows you to customize Apple Pay cards. Only for [Jailbreak](https://www.cydiafree.com) users.
+**_Beta_** release, if you have problems with the interface, please let me know about it.
 
 ### Compiling
   - [Theos](https://theos.dev/) is required to compile the project.
@@ -28,8 +29,9 @@ If you want to improve this project, then write to the author [@Uncle_Milty](htt
 
 # Russian:
 
-## deCard
+## deCard (Бета версия)
 Позволяет кастомизировать карты Apple Pay на вашем iPhone. Необходим [Jailbreak](https://www.cydiafree.com) устройства!
+**_Бета релиз_** если у вас возникли проблемы с интерфейсом, прошу сообщить мне об этом. Так вы очень сильно поможете проекту!
 
 ### Компиляция   
   - Для компиляции этого твика необходимо установить [Theos](https://theos.dev/).
