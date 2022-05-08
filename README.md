@@ -1,12 +1,12 @@
-<img src="preview.png">
+<img src="/githubAssets/preview.png">
 
 # Preview
 
-<img src="previewScreen.png">
+<img src="/githubAssets/previewScreen.png">
 
 # Instruction
 
-<img src="instruction.png">
+<img src="/githubAssets/instruction.png">
 
 # English:
 
