@@ -15,4 +15,4 @@ include $(THEOS_MAKE_PATH)/xcodeproj.mk
 
 
 after-install::
-    install.exec "killall -9 ${XCODEPROJ_NAME}; uicache -p /Applications/${XCODEPROJ_NAME}.app;"
+	install.exec "killall -9 ${XCODEPROJ_NAME}; uicache -p /Applications/${XCODEPROJ_NAME}.app;"
