@@ -1,6 +1,6 @@
 Package: dr.ih8jam.decard
 Name: deCard
-Depends: firmware (>= 13.0)
+Depends: firmware (>= 12.0)
 Version: 1.0.0
 Architecture: iphoneos-arm
 Description: Simple way to customize Apple Pay cards
