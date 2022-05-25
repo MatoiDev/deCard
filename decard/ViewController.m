@@ -28,6 +28,11 @@
     // pick picture
     UIImage *img = [info objectForKey:UIImagePickerControllerOriginalImage];
     loadedCard.image = img;
+    loadedCard.contentMode = UIViewContentModeScaleAspectFill;
+    loadedCard.layer.cornerRadius = 15;
+    loadedCard.layer.borderWidth = 15;
+    [loadedCard.layer setBorderColor:(CGColorRef _Nullable)UIColor.whiteColor];
+    loadedCard.clipsToBounds = YES;
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
