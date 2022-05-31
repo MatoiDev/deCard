@@ -24,8 +24,6 @@ iPhone running iOS 13.x & 14.x & 15.x (Adapted for 6, 6s, 7, 8, se2020. Interfac
 
 ### License
 It is forbidden to use this code for commercial purposes. 
-If you want to improve this project, then write to the author [@Uncle_Milty](https://t.me/Uncle_Milty) in telegram.
-
 
 
 # Russian:
@@ -44,4 +42,4 @@ If you want to improve this project, then write to the author [@Uncle_Milty](htt
 
 ### Лицензия
 Запрещается использовать данный проект в коммерческих целях!
-Если у вас есть предложения по улучшению, просьба написать автору в телеграм: [@Uncle_Milty](https://t.me/Uncle_Milty)
+По вопросам сюда [@Uncle_Milty](https://t.me/Uncle_Milty)
