@@ -20,6 +20,9 @@ UIImagePickerControllerDelegate
 // download card Pattern
 - (IBAction)downloadPattern:(id)sender;
 
+// blur
+@property (weak, nonatomic) IBOutlet UIVisualEffectView *mainBlur;
+
 
 // load own card
 @property (nonatomic, retain) UIImagePickerController *cardImageController;
@@ -31,7 +34,7 @@ UIImagePickerControllerDelegate
 @property (nonatomic, retain) IBOutlet UIButton *chooseImageButton;
 @property (nonatomic, retain) IBOutlet UIButton *confirmButton;
 @property (nonatomic, retain) IBOutlet UIButton *cleanCacheButton;
-
+@property (weak, nonatomic) IBOutlet UIButton *fafnierButton;
 
 // sroll view
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollerMain;

@@ -1,11 +1,11 @@
-Package: dr.ih8jam.decard
+Package: com.appleworm.decard
 Name: deCard
 Depends: firmware (>= 13.0)
-Version: 1.0.0
+Version: 2.0.0
 Architecture: iphoneos-arm
-Description: Simple way to customize Apple Pay cards
-Maintainer: IH8Jam <matveytitor@gmail.com>
-Author: IH8Jam <matveytitor@gmail.com>
+Description: UI 🍏 pay cards customizer
+Maintainer: AppleWorm
+Author: AppleWorm
 Section: Applications
-dev: IH8Jam
+dev: AppleWorm
 Icon: file:///Applications/deCard.app/Cards.bundle/icon_large.png

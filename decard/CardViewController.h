@@ -11,7 +11,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface CardViewController : UIViewController
+@interface CardViewController : UIViewController <UIScrollViewDelegate>
 
 // this is an important var that save a name of chosen card)
 extern NSString *cardName;
@@ -33,7 +33,11 @@ extern NSString *cardName;
 -(IBAction)ShuTsukiyama_choiced:(id)sender;
 -(IBAction)hinami_choiced:(id)sender;
 
-// back button)
-- (IBAction)backButton:(id)sender;
+// Coming soon lable
+@property (nonatomic, retain) IBOutlet UILabel *comingSoonLabel;
+
+// blur
+@property (weak, nonatomic) IBOutlet UIVisualEffectView *cardBlur;
+
 
 @end

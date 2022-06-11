@@ -24,6 +24,7 @@
 -(IBAction)goTelegram:(id)sender;
 -(IBAction)goVK:(id)sender;
 
-
+// blur
+@property (weak, nonatomic) IBOutlet UIVisualEffectView *creditBlur;
 
 @end

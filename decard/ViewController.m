@@ -17,9 +17,30 @@
 
 @implementation ViewController
 
-@synthesize chooseImageButton, cleanCacheButton, confirmButton, scrollerMain, loadedCard, cardImageController;
+@synthesize chooseImageButton, cleanCacheButton, confirmButton, scrollerMain, loadedCard, cardImageController, mainBlur, fafnierButton;
 
 # pragma mark custom card (complete)
+
+
+-(void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    [[self mainBlur] setAlpha: 1];
+    self.navigationController.navigationBar.hidden = YES;
+    
+    [UIView animateWithDuration:0.4 animations:^{
+        [[self mainBlur] setAlpha:0];
+    } completion:^(BOOL finished) {
+        [[self mainBlur] setOpaque:0];
+    }];
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [UIView animateWithDuration:0.3 animations:^{
+        [[self mainBlur] setAlpha:1];
+    } completion:nil];
+}
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)info {
     
@@ -157,6 +178,18 @@
     // This is init of scrollView
     
     [super viewDidLoad];
+    
+    [[chooseImageButton layer] setCornerRadius:15];
+    [[chooseImageButton layer] setBorderWidth: 5];
+    [[chooseImageButton layer] setBorderColor:(CGColorRef _Nullable)UIColor.whiteColor];
+    
+    [[confirmButton layer] setCornerRadius:15];
+    [[confirmButton layer] setBorderWidth: 5];
+    [[confirmButton layer] setBorderColor:(CGColorRef _Nullable)UIColor.whiteColor];
+    
+    fafnierButton.tintColor = UIColor.blackColor;
+    fafnierButton.titleLabel.textColor = UIColor.whiteColor;
+    
     [scrollerMain setScrollEnabled:TRUE];
     [scrollerMain setContentSize:CGSizeMake(375, 1000)];
     
