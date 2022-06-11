@@ -2,7 +2,7 @@
 
 # Preview
 
-<img src="/githubAssets/previewScreen.png">
+<!-- <img src="/githubAssets/previewScreen.png"> -->
 
 # Instruction
 
