@@ -1,4 +1,4 @@
-<img src="/githubAssets/preview.png">
+<img src="/githubAssets/preview.jpg">
 
 <!-- # Preview -->
 
