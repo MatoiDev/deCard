@@ -4,7 +4,7 @@
 //     ██║░░██║█████╗░░██║░░╚═╝███████║██████╔╝██║░░██║               CardViewController.h
 //     ██║░░██║██╔══╝░░██║░░██╗██╔══██║██╔══██╗██║░░██║           ***Cards page file header***
 //     ██████╔╝███████╗╚█████╔╝██║░░██║██║░░██║██████╔╝
-//     ╚═════╝░╚══════╝░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░                    Created by IH8Jam on 09.03.2022.
+//     ╚═════╝░╚══════╝░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░                    Created by AppleWorm on 09.03.2022.
 //
 //  *PATENTED! Any use of this file for commercial purposes is prohibited. All rights reserved.
 

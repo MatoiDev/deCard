@@ -4,7 +4,7 @@
 //     ██║░░██║█████╗░░██║░░╚═╝███████║██████╔╝██║░░██║              CardViewController.m
 //     ██║░░██║██╔══╝░░██║░░██╗██╔══██║██╔══██╗██║░░██║              ***Cards page file***
 //     ██████╔╝███████╗╚█████╔╝██║░░██║██║░░██║██████╔╝
-//     ╚═════╝░╚══════╝░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░                    Created by IH8Jam on 09.03.2022.
+//     ╚═════╝░╚══════╝░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░                    Created by AppleWorm on 09.03.2022.
 //
 //  *PATENTED! Any use of this file for commercial purposes is prohibited. All rights reserved.
 
@@ -41,48 +41,55 @@ NSString *cardName = nil;
     } completion:nil];
 }
 
+- (void) viewWillDisappear:(BOOL)animated {
+    [UIView animateWithDuration:0.2 animations:^{
+            self.navigationController.navigationBar.hidden = YES;
+            [[self cardBlur] setAlpha:1];
+    }];
+}
+
 -(IBAction)ruiTachibana_choiced:(id)sender {
     cardName = @"rui";
-    [UIView animateWithDuration:0.2 animations:^{
-        self.navigationController.navigationBar.hidden = YES;
-        [[self cardBlur] setAlpha:1];
-    } completion:nil];
+//    [UIView animateWithDuration:0.2 animations:^{
+//        self.navigationController.navigationBar.hidden = YES;
+//        [[self cardBlur] setAlpha:1];
+//    } completion:nil];
     [[self navigationController] popViewControllerAnimated:true];
 }
 
 -(IBAction)suzuya_choiced:(id)sender {
     cardName = @"suzuya";
-    [UIView animateWithDuration:0.2 animations:^{
-        self.navigationController.navigationBar.hidden = YES;
-        [[self cardBlur] setAlpha:1];
-    } completion:nil];
+//    [UIView animateWithDuration:0.2 animations:^{
+//        self.navigationController.navigationBar.hidden = YES;
+//        [[self cardBlur] setAlpha:1];
+//    } completion:nil];
     [[self navigationController] popViewControllerAnimated:true];
 }
 
 -(IBAction)ShuTsukiyama_choiced:(id)sender {
     cardName = @"shu";
-    [UIView animateWithDuration:0.2 animations:^{
-        self.navigationController.navigationBar.hidden = YES;
-        [[self cardBlur] setAlpha:1];
-    } completion:nil];
+//    [UIView animateWithDuration:0.2 animations:^{
+//        self.navigationController.navigationBar.hidden = YES;
+//        [[self cardBlur] setAlpha:1];
+//    } completion:nil];
     [[self navigationController] popViewControllerAnimated:true];
 }
 
 -(IBAction)catGirl_choiced:(id)sender {
     cardName = @"catGirl";
-    [UIView animateWithDuration:0.2 animations:^{
-        self.navigationController.navigationBar.hidden = YES;
-        [[self cardBlur] setAlpha:1];
-    } completion:nil];
+//    [UIView animateWithDuration:0.2 animations:^{
+//        self.navigationController.navigationBar.hidden = YES;
+//        [[self cardBlur] setAlpha:1];
+//    } completion:nil];
     [[self navigationController] popViewControllerAnimated:true];
 }
 
 -(IBAction)hinami_choiced:(id)sender {
     cardName = @"hinami";
-    [UIView animateWithDuration:0.2 animations:^{
-        self.navigationController.navigationBar.hidden = YES;
-        [[self cardBlur] setAlpha:1];
-    } completion:nil];
+//    [UIView animateWithDuration:0.2 animations:^{
+//        self.navigationController.navigationBar.hidden = YES;
+//        [[self cardBlur] setAlpha:1];
+//    } completion:nil];
     [[self navigationController] popViewControllerAnimated:true];
 }
 
@@ -107,5 +114,7 @@ NSString *cardName = nil;
         [[self comingSoonLabel] setAlpha:0];
     } completion:nil];
 }
+
+
 
 @end

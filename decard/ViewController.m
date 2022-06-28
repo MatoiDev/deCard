@@ -4,12 +4,13 @@
 //     ██║░░██║█████╗░░██║░░╚═╝███████║██████╔╝██║░░██║               ViewController.m
 //     ██║░░██║██╔══╝░░██║░░██╗██╔══██║██╔══██╗██║░░██║        ***The main programm file***
 //     ██████╔╝███████╗╚█████╔╝██║░░██║██║░░██║██████╔╝
-//     ╚═════╝░╚══════╝░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░                    Created by IH8Jam on 09.03.2022.
+//     ╚═════╝░╚══════╝░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░                    Created by AppleWorm on 09.03.2022.
 //
 //  *PATENTED! Any use of this file for commercial purposes is prohibited. All rights reserved.
 
 #import "ViewController.h"
 #import "CardViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ViewController ()
 
@@ -17,10 +18,13 @@
 
 @implementation ViewController
 
-@synthesize chooseImageButton, cleanCacheButton, confirmButton, scrollerMain, loadedCard, cardImageController, mainBlur, fafnierButton;
+@synthesize chooseImageButton, cleanCacheButton, confirmButton, scrollerMain, loadedCard, cardImageController, mainBlur, fafnierButton, shouldAutorotate;
 
 # pragma mark custom card (complete)
 
+- (BOOL)shouldAutorotate {
+    return false;
+}
 
 -(void)viewWillAppear:(BOOL)animated {
     
@@ -180,14 +184,18 @@
     [super viewDidLoad];
     
     [[chooseImageButton layer] setCornerRadius:15];
-    [[chooseImageButton layer] setBorderWidth: 5];
-    [[chooseImageButton layer] setBorderColor:(CGColorRef _Nullable)UIColor.whiteColor];
+    chooseImageButton.layer.borderWidth = 5.0f;
+    chooseImageButton.layer.borderColor = [UIColor whiteColor].CGColor;
     
     [[confirmButton layer] setCornerRadius:15];
-    [[confirmButton layer] setBorderWidth: 5];
-    [[confirmButton layer] setBorderColor:(CGColorRef _Nullable)UIColor.whiteColor];
+    confirmButton.layer.borderWidth = 5.0f;
+    confirmButton.layer.borderColor = [UIColor whiteColor].CGColor;
     
-    fafnierButton.tintColor = UIColor.blackColor;
+    fafnierButton.clipsToBounds = YES;
+    fafnierButton.backgroundColor = UIColor.blackColor;
+    fafnierButton.layer.cornerRadius = 6;
+    fafnierButton.titleLabel.adjustsFontSizeToFitWidth = true;
+//    fafnierButton.titleLabel.font = [UIFont fontWithName:@"AvenirNextCondensed-DemiBold" size:15];
     fafnierButton.titleLabel.textColor = UIColor.whiteColor;
     
     [scrollerMain setScrollEnabled:TRUE];
@@ -359,5 +367,14 @@
         [self presentViewController:alert animated:YES completion:nil];
     }
 }
+
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+-(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    return UIInterfaceOrientationPortrait;
+}
+
 
 @end

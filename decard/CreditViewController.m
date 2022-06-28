@@ -4,7 +4,7 @@
 //     ██║░░██║█████╗░░██║░░╚═╝███████║██████╔╝██║░░██║               CreditViewController.m
 //     ██║░░██║██╔══╝░░██║░░██╗██╔══██║██╔══██╗██║░░██║               ***Cedits page file***
 //     ██████╔╝███████╗╚█████╔╝██║░░██║██║░░██║██████╔╝
-//     ╚═════╝░╚══════╝░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░                     Created by IH8Jam on 09.03.2022.
+//     ╚═════╝░╚══════╝░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░                     Created by AppleWorm on 09.03.2022.
 //
 //  *PATENTED! Any use of this file for commercial purposes is prohibited. All rights reserved.
 
@@ -32,7 +32,7 @@
 -(void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
-    [UIView animateWithDuration:0.3 animations:^{
+    [UIView animateWithDuration:0.2 animations:^{
         [[self creditBlur] setAlpha:1];
     } completion:nil];
 }

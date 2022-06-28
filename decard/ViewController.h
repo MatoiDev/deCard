@@ -4,7 +4,7 @@
 //     ██║░░██║█████╗░░██║░░╚═╝███████║██████╔╝██║░░██║                  ViewController.h
 //     ██║░░██║██╔══╝░░██║░░██╗██╔══██║██╔══██╗██║░░██║        ***The main programm file header***
 //     ██████╔╝███████╗╚█████╔╝██║░░██║██║░░██║██████╔╝
-//     ╚═════╝░╚══════╝░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░                    Created by IH8Jam on 09.03.2022.
+//     ╚═════╝░╚══════╝░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░                    Created by AppleWorm on 09.03.2022.
 //
 //  *PATENTED! Any use of this file for commercial purposes is prohibited. All rights reserved.
 
@@ -38,6 +38,7 @@ UIImagePickerControllerDelegate
 
 // sroll view
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollerMain;
+@property(nonatomic, readonly) BOOL shouldAutorotate;
 
 // functions
 -(IBAction)chooseImageButton_clicked:(id)sender;
