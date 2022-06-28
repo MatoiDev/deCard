@@ -49,8 +49,8 @@
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="v. 2.0.0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xNi-qO-zoC">
-                                                <rect key="frame" x="131" y="27" width="52" height="19.666666666666671"/>
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="v. 2.1.0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xNi-qO-zoC">
+                                                <rect key="frame" x="131" y="27" width="50" height="19.666666666666671"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -94,6 +94,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="7oj-q7-5rE" firstAttribute="leading" secondItem="41k-D5-Hzi" secondAttribute="leadingMargin" id="4MX-J3-yDM"/>
+                                            <constraint firstItem="7oj-q7-5rE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="41k-D5-Hzi" secondAttribute="top" constant="85.670000000000002" id="6Tm-V8-fLx"/>
                                             <constraint firstAttribute="height" constant="130" id="Ezs-QN-lZz"/>
                                             <constraint firstItem="a6R-Fq-twh" firstAttribute="top" secondItem="41k-D5-Hzi" secondAttribute="topMargin" id="HDn-Od-O3o"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="7oj-q7-5rE" secondAttribute="trailing" id="cXk-HU-YI9"/>
@@ -169,6 +170,11 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="23X-IF-3zu" firstAttribute="top" secondItem="41k-D5-Hzi" secondAttribute="bottom" constant="1" id="36N-IU-HlV"/>
+                                    <constraint firstItem="yNX-PO-hUw" firstAttribute="top" secondItem="1e7-nZ-bD0" secondAttribute="bottom" constant="1" id="PGc-5Q-y76"/>
+                                    <constraint firstItem="1e7-nZ-bD0" firstAttribute="top" secondItem="23X-IF-3zu" secondAttribute="bottom" constant="1" id="cZ3-up-EHt"/>
+                                </constraints>
                             </stackView>
                             <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t1x-4Y-WBI">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
@@ -176,11 +182,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l4X-r6-FMP">
-                                            <rect key="frame" x="0.0" y="0.0" width="150" height="716"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l4X-r6-FMP">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="M5e-k0-UId">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="716"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </view>
                                             <vibrancyEffect>
@@ -188,6 +193,12 @@
                                             </vibrancyEffect>
                                         </visualEffectView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="l4X-r6-FMP" firstAttribute="top" secondItem="T4l-dz-F26" secondAttribute="top" id="64g-Mu-KyS"/>
+                                        <constraint firstItem="l4X-r6-FMP" firstAttribute="leading" secondItem="T4l-dz-F26" secondAttribute="leading" id="H48-sT-V8e"/>
+                                        <constraint firstAttribute="bottom" secondItem="l4X-r6-FMP" secondAttribute="bottom" id="WZ4-ue-Mse"/>
+                                        <constraint firstAttribute="trailing" secondItem="l4X-r6-FMP" secondAttribute="trailing" id="egk-g9-HnE"/>
+                                    </constraints>
                                 </view>
                                 <blurEffect style="regular"/>
                             </visualEffectView>
@@ -217,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JGa-cX-pxc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2913.04347826087" y="-694.41964285714278"/>
+            <point key="canvasLocation" x="-2913.8461538461538" y="-694.54976303317528"/>
         </scene>
         <!--ReadyCards-->
         <scene sceneID="2Ik-dZ-A3X">
@@ -373,7 +384,7 @@
                                 <rect key="frame" x="0.0" y="-197" width="414" height="1289.3333333333333"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="inV-Oq-wI5">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="1289.3333333333333"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="1289"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2pk-X4-hOO">
@@ -451,10 +462,11 @@
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hbf-PD-ccr">
-                                                        <rect key="frame" x="208.33333333333337" y="80" width="118" height="25"/>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hbf-PD-ccr">
+                                                        <rect key="frame" x="208.33333333333337" y="80" width="120" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="GA4-au-0A2"/>
+                                                            <constraint firstAttribute="width" constant="120" id="zeN-ip-GLO"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="AppleWorm">
@@ -690,7 +702,7 @@
                             <constraint firstItem="wnP-Mx-NBD" firstAttribute="top" secondItem="0Qn-wL-QJH" secondAttribute="top" id="zcG-hp-EId"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="v2.0.0" id="e1i-z0-COG">
+                    <navigationItem key="navigationItem" title="v2.1.0" id="e1i-z0-COG">
                         <barButtonItem key="backBarButtonItem" title="Back" id="JDy-Np-GF5"/>
                     </navigationItem>
                     <size key="freeformSize" width="414" height="1000"/>
@@ -754,16 +766,16 @@
     </scenes>
     <resources>
         <image name="LaunchScreen" width="1024" height="1024"/>
-        <image name="arrowshape.turn.up.left.fill" catalog="system" width="32" height="32"/>
+        <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
         <image name="cardPreviewWhite" width="363" height="188"/>
         <image name="catgirlMini" width="300" height="195"/>
         <image name="hinamiMini" width="300" height="195"/>
-        <image name="paperplane.circle.fill" catalog="system" width="32" height="32"/>
+        <image name="paperplane.circle.fill" catalog="system" width="128" height="121"/>
         <image name="ruiMini" width="300" height="195"/>
-        <image name="square.and.arrow.down" catalog="system" width="32" height="32"/>
-        <image name="square.and.arrow.up" catalog="system" width="32" height="32"/>
+        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="suzuyaMini" width="300" height="195"/>
-        <image name="terminal" catalog="system" width="32" height="32"/>
+        <image name="terminal" catalog="system" width="128" height="93"/>
         <image name="tsukiyamaMini" width="300" height="195"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
