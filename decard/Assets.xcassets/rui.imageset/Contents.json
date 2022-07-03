@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "suzuyaMini.jpg",
+      "filename" : "rui.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "rui-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "rui-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

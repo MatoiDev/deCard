@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "ruiMini.png",
+      "filename" : "catGirl.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "catGirl-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "catGirl-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -23,6 +23,13 @@ extern NSString *cardName;
 @property (nonatomic, retain) IBOutlet UIButton *catGirl;
 @property (nonatomic, retain) IBOutlet UIButton *hinami;
 
+// ready cards images OL
+@property (weak, nonatomic) IBOutlet UIImageView *shuImage;
+@property (weak, nonatomic) IBOutlet UIImageView *suzuyaImage;
+@property (weak, nonatomic) IBOutlet UIImageView *catGirlImage;
+@property (weak, nonatomic) IBOutlet UIImageView *hinamiImage;
+@property (weak, nonatomic) IBOutlet UIImageView *ruiImage;
+
 // scrollView init
 @property (strong, nonatomic) IBOutlet UIScrollView *cardScroller;
 
@@ -38,6 +45,5 @@ extern NSString *cardName;
 
 // blur
 @property (weak, nonatomic) IBOutlet UIVisualEffectView *cardBlur;
-
 
 @end

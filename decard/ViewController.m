@@ -20,6 +20,8 @@
 
 @synthesize chooseImageButton, cleanCacheButton, confirmButton, scrollerMain, loadedCard, cardImageController, mainBlur, fafnierButton, shouldAutorotate;
 
+bool success = false;
+
 # pragma mark custom card (complete)
 
 - (BOOL)shouldAutorotate {
@@ -52,12 +54,15 @@
     
     // pick picture
     UIImage *img = [info objectForKey:UIImagePickerControllerOriginalImage];
-    loadedCard.image = img;
-    loadedCard.contentMode = UIViewContentModeScaleAspectFill;
-    loadedCard.layer.cornerRadius = 15;
-    loadedCard.layer.borderWidth = 15;
-    [loadedCard.layer setBorderColor:(CGColorRef _Nullable)UIColor.whiteColor];
-    loadedCard.clipsToBounds = YES;
+    
+    bool success = false;
+    
+    [loadedCard setImage:img];
+    [loadedCard setContentMode:UIViewContentModeScaleAspectFill];
+    [[loadedCard layer] setCornerRadius:15];
+    [[loadedCard layer] setBorderWidth:15];
+    [[loadedCard layer] setBorderColor:(CGColorRef _Nullable)UIColor.whiteColor];
+    [loadedCard setClipsToBounds:YES];
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
@@ -108,7 +113,7 @@
                             if ([fm removeItemAtURL:cardPng error:&error]) {
                                 // create new card preview
                                 if ([fm moveItemAtPath:card toPath:pathToMove error:&error]) {
-                                
+                                    success = true;
                                     UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Success!"
                                                                    message:@"The card was successfully set. Please, clear the cache to make it work:)"
                                                                    preferredStyle:UIAlertControllerStyleAlert];
@@ -139,6 +144,18 @@
             }                               //            //    //  //        //
         }                                   //            //    //    //      //
     }                                       //////////    //    //      //    //////////    this part of code :)
+    if (!success) {
+            
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Failure!"
+                                           message:@"This error appeared because your device hasn't jailbroken or you haven't got any card in Apple Wallet."
+                                           preferredStyle:UIAlertControllerStyleAlert];
+             
+            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+               handler:^(UIAlertAction * action) {}];
+             
+            [alert addAction:defaultAction];
+            [self presentViewController:alert animated:YES completion:nil];
+    }
 }
     
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
@@ -207,15 +224,14 @@
 #pragma mark chooseImageButton (complete)
 
 -(IBAction)chooseImageButton_clicked:(id)sender {
-    
+    success = false;
     // This button is for change viewController so this func is empty :(
-    
 }
 
 
 #pragma mark confirmButton (complete)
 -(IBAction)confirmButton_clicked:(id)sender {
-    
+    success = false;
     // This func sets chosen image to the card preview
     
     if (!cardName) {
@@ -239,19 +255,18 @@
         NSArray *urls = [fm contentsOfDirectoryAtURL:url includingPropertiesForKeys:[NSArray arrayWithObjects:NSURLNameKey, NSURLIsDirectoryKey, NSURLContentModificationDateKey, nil] options:NSDirectoryEnumerationSkipsHiddenFiles error:nil];
 
         if ([fm fileExistsAtPath:path]) {
-
+            
             for (NSURL *urlToCardFolder in urls) {
 
                 if ([[NSString stringWithFormat: @"%@", urlToCardFolder] containsString:@".pkpass"] &&
-                     ![[NSString stringWithFormat: @"%@", urlToCardFolder] containsString:@".cache"]) {
+                     ![[NSString stringWithFormat: @"%@", urlToCardFolder] containsString:@".cache"]) { // 5
 
                     NSArray *filesInCardDirectory = [fm contentsOfDirectoryAtURL:urlToCardFolder includingPropertiesForKeys:[NSArray arrayWithObjects:NSURLNameKey, NSURLIsDirectoryKey, NSURLContentModificationDateKey, nil] options:NSDirectoryEnumerationSkipsHiddenFiles error:nil];
 
-                    for (NSURL *cardPng in filesInCardDirectory) {
+                    for (NSURL *cardPng in filesInCardDirectory) { // 6
 
                         if ([[cardPng lastPathComponent] isEqualToString:@"cardBackgroundCombined@2x.png"]) {
                             NSError *error;
-#pragma mark to fix
                             NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"Cards" ofType:@"bundle"];
                             NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
                             NSString *resource = [bundle pathForResource:cardName ofType:@"png"];
@@ -262,7 +277,7 @@
 
                             if ([fm removeItemAtURL:cardPng error:&error]) {
                                 if ([fm copyItemAtPath:resource toPath:pathToMove error:&error]){
-#pragma mark to fix
+                                    success = true;
                                     UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Success!"
                                                                    message:@"The card was successfully set. Please, clear the cache to make it work:)"
                                                                    preferredStyle:UIAlertControllerStyleAlert];
@@ -272,27 +287,36 @@
                                      
                                     [alert addAction:defaultAction];
                                     [self presentViewController:alert animated:YES completion:nil];
-                                    
-                                } else {
-                                    
-                                    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Failure!"
-                                                                   message:@"Something went wrong! Reset and try again."
-                                                                   preferredStyle:UIAlertControllerStyleAlert];
-                                     
-                                    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-                                       handler:^(UIAlertAction * action) {}];
-                                     
-                                    [alert addAction:defaultAction];
-                                    [self presentViewController:alert animated:YES completion:nil];
-                                    
                                 }
                             }
                         }
                     }
                 }
             }
+        } else {
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Can not find a card"
+                                           message:@"It seems like you havent set a card in Apple Wallet. Set your card and try again."
+                                           preferredStyle:UIAlertControllerStyleAlert];
+             
+            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+               handler:^(UIAlertAction * action) {}];
+             
+            [alert addAction:defaultAction];
+            [self presentViewController:alert animated:YES completion:nil];
         }
-    }
+        if (!success) {
+                
+                UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Failure!"
+                                               message:@"This error appeared because your device hasn't jailbroken or you haven't got any card in Apple Wallet."
+                                               preferredStyle:UIAlertControllerStyleAlert];
+                 
+                UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                   handler:^(UIAlertAction * action) {}];
+                 
+                [alert addAction:defaultAction];
+                [self presentViewController:alert animated:YES completion:nil];
+        }
+  }
 }
 
 
