@@ -1,7 +1,7 @@
 Package: com.appleworm.decard
 Name: deCard
 Depends: firmware (>= 13.0)
-Version: 2.1.0
+Version: 2.2.0
 Architecture: iphoneos-arm
 Description: UI 🍏 pay cards customizer
 Maintainer: AppleWorm <applewormdev@gmail.com>
