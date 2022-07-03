@@ -16,6 +16,5 @@ int main(int argc, char * argv[]) {
     @autoreleasepool {
         appDelegateClassName = NSStringFromClass([AppDelegate class]);
     }
-    //test
     return UIApplicationMain(argc, argv, nil, appDelegateClassName);
 }
