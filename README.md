@@ -21,7 +21,7 @@ Allows you to customize Apple Pay cards. Only for [Jailbreak](https://www.cydiaf
 iPhone running iOS 13.x & 14.x & 15.x
 
 ### License
-It is forbidden to use this code for commercial purposes. 
+[GNU General Public License v3.0](https://github.com/AppIeWorm/deCard/blob/main/LICENSE)
 
 
 # Russian:
@@ -36,5 +36,7 @@ It is forbidden to use this code for commercial purposes.
 **БЕЗ JAILBREAK РАБОТАТЬ НЕ БУДЕТ!** Программа изменяет файлы в корневой директории, доступ к которой даёт только взлом устройства!
 
 ### Лицензия
-Запрещается использовать данный проект в коммерческих целях!
+[GNU General Public License v3.0](https://github.com/AppIeWorm/deCard/blob/main/LICENSE)
+
+
 По всем вопросам сюда [@Uncle_Milty](https://t.me/Uncle_Milty)
