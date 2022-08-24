@@ -42,7 +42,7 @@
         [[self creditBlur] setAlpha:1];
     } completion:^(BOOL finished) {
         self.navigationController.navigationBar.hidden = true;
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/AppIeWorm"] options:@{} completionHandler:nil];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/MatoiDev"] options:@{} completionHandler:nil];
         [UIView animateWithDuration:1 animations:^{
             [[self creditBlur] setAlpha:0];
         } completion:nil];
