@@ -1,1 +1,5 @@
-* linguist-language=Objective-C
+*.m linguist-language=Objective-C
+*.xm linguist-language=Objective-C
+Makefile linguist-language=Objective-C
+README.md linguist-language=Objective-C
+
