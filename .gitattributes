@@ -2,4 +2,4 @@
 *.xm linguist-language=Objective-C
 Makefile linguist-language=Objective-C
 README.md linguist-language=Objective-C
-
+layout/DEBIAN/postinst linguist-language=Objective-C
